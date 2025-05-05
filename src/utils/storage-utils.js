@@ -1,9 +1,14 @@
 const STORAGE_KEY = 'polygon-manager-data';
 
-export function savePolygonsToStorage(bufferZone, workZoneContent) {
+export function savePolygonsToStorage(bufferZone, workZoneContent, scale, translateX, translateY) {
     const savedData = {
         bufferPolygons: [],
-        workPolygons: []
+        workPolygons: [],
+        workZoneTransform: {
+            scale,
+            translateX,
+            translateY
+        }
     };
     bufferZone.querySelectorAll('polygon-item').forEach(item => {
         savedData.bufferPolygons.push({ points: item.points });

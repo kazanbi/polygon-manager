@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: CC0-1.0
 
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -21,8 +22,13 @@ module.exports = {
   },
   devServer: {
     static: './public',
-    port: 8996,
+    port: 8986,
     hot: true
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
+    }),
+  ],
   devtool: 'inline-source-map',
 };

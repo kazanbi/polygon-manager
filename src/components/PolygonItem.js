@@ -1,7 +1,6 @@
 export default class PolygonItem extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' });
     }
 
     static get observedAttributes() {
@@ -27,7 +26,7 @@ export default class PolygonItem extends HTMLElement {
     }
 
     render() {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
             <svg width="80" height="80" viewBox="0 0 100 100">
                 <polygon points="${this.points || ''}" fill="#871929" stroke="none"/>
             </svg>
