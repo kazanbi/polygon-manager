@@ -1,8 +1,8 @@
 {
-  "title": "Hello-world",
-  "shortName": "hello-world-2",
-  "description": "Hello world simple webcomp example",
-  "descriptionAbstract": "Hello world simple webcomp example",
+  "title": "Polygon Manager",
+  "shortName": "polygon-manager",
+  "description": "Web component that allows creation and management of SVG polygons with drag and drop functionality",
+  "descriptionAbstract": "Create and manage polygons between buffer and work zones",
   "license": "AGPL-3.0-or-later",
   "repositoryUrl": "https://your-repository.git",
   "copyrightHolders": [
@@ -22,7 +22,7 @@
     }
   ],
   "image": "wcs-logo.png",
-  "searchTags": [],
+  "searchTags": ["polygon", "svg", "drag-and-drop", "buffer", "work zone"],
   "dist": {
     "basePath": "dist",
     "files": [
@@ -32,17 +32,7 @@
     ]
   },
   "configuration": {
-    "tagName": "hello-world",
-    "options": [
-      {
-        "key": "title",
-        "type": "text",
-        "label": "title of the web-comp",
-        "required": false,
-        "options": {
-          "default": "hello-world"
-        }
-      }
-    ]
+    "tagName": "polygon-manager",
+    "options": []
   }
 }

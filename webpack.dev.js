@@ -11,9 +11,17 @@ module.exports = {
     filename: 'webcomp-boilerplate.js',
     clean: true
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
   devServer: {
     static: './public',
-    port: 8998,
+    port: 8996,
     hot: true
   },
   devtool: 'inline-source-map',
